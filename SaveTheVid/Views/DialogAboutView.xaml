@@ -1,0 +1,226 @@
+﻿<Controls:MetroWindow x:Class="SaveTheVid.Views.DialogAboutView"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:local="clr-namespace:SaveTheVid.Views"
+                      mc:Ignorable="d"
+                      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:Icons="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                      Title="About"
+                      TitleCaps="False"
+                      SizeToContent="WidthAndHeight"
+                      ResizeMode="NoResize"
+                      WindowStartupLocation="CenterOwner"
+                      Background="#FFE4F3FF">
+
+    <Controls:MetroWindow.IconTemplate>
+        <DataTemplate>
+            <Icons:PackIconMaterial Kind="InformationOutline"
+                                    Width="{TemplateBinding Width}"
+                                    Height="{TemplateBinding Height}"
+                                    Margin="2"
+                                    Padding="4"
+                                    Foreground="{DynamicResource IdealForegroundColorBrush}"/>
+        </DataTemplate>
+    </Controls:MetroWindow.IconTemplate>
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <Style x:Key="HyperlinkButton" TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Image Source="icon.ico"
+                   Width="65"
+                   Height="65"
+                   />
+            <StackPanel>
+                <TextBlock Text="SaveTheVid"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Margin="5" />
+                <TextBlock Text="{Binding ParentVM.Version}"
+                           FontStyle="Italic"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           Margin="5" />
+            </StackPanel>
+        </StackPanel>
+
+
+        <TextBlock Grid.Row="1"
+                   Text="Copyright © 2018 Elias Gasparis"
+                   FontSize="16"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Margin="5" />
+
+        <Button Grid.Row="2"
+                Name="VisitMySite"
+                Style="{StaticResource HyperlinkButton}"
+                Focusable="False"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="5">
+            <TextBlock>
+                    <Hyperlink Focusable="False">
+                        www.elgaspar.com
+                    </Hyperlink>
+            </TextBlock>
+        </Button>
+
+        <StackPanel Grid.Row="4"
+                    Orientation="Horizontal"
+                    Margin="5">
+            <TextBlock Text="This program is licensed under the "/>
+            <Button Name="ShowMyLicense"
+                    Style="{StaticResource HyperlinkButton}"
+                    Focusable="False">
+                <TextBlock>
+                        <Hyperlink Focusable="False">
+                            MIT License
+                        </Hyperlink>
+                </TextBlock>
+            </Button>
+            <TextBlock Text="."/>
+        </StackPanel>
+
+        <Grid Grid.Row="6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
+                       Text="Third-party libraries/components used:"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       Margin="5" />
+
+            <TextBlock Grid.Row="1" Grid.Column="1"
+                       Text="Caliburn.Micro"
+                       VerticalAlignment="Center" />
+            <Button Grid.Row="1" Grid.Column="3"
+                    Name="ShowCaliburnMicroLicense"
+                    Style="{StaticResource HyperlinkButton}"
+                    Focusable="False"
+                    VerticalAlignment="Center" >
+                <TextBlock>
+                    <Hyperlink Focusable="False">
+                        License
+                    </Hyperlink>
+                </TextBlock>
+            </Button>
+
+
+            <TextBlock Grid.Row="2" Grid.Column="1"
+                       Text="MahApps.Metro"
+                       VerticalAlignment="Center" />
+            <Button Grid.Row="2" Grid.Column="3"
+                    Name="ShowMahAppsMetroLicense"
+                    Style="{StaticResource HyperlinkButton}"
+                    Focusable="False"
+                    VerticalAlignment="Center" >
+                <TextBlock>
+                    <Hyperlink Focusable="False">
+                        License
+                    </Hyperlink>
+                </TextBlock>
+            </Button>
+
+            <TextBlock Grid.Row="3" Grid.Column="1"
+                       Text="MahApps.Metro.IconPacks"
+                       VerticalAlignment="Center" />
+            <Button Grid.Row="3" Grid.Column="3"
+                    Name="ShowMahAppsMetroIconPacksLicense"
+                    Style="{StaticResource HyperlinkButton}"
+                    Focusable="False"
+                    VerticalAlignment="Center" >
+                <TextBlock>
+                    <Hyperlink Focusable="False">
+                        License
+                    </Hyperlink>
+                </TextBlock>
+            </Button>
+
+            <TextBlock Grid.Row="4" Grid.Column="1"
+                       Text="ControlzEx"
+                       VerticalAlignment="Center" />
+            <Button Grid.Row="4" Grid.Column="3"
+                    Name="ShowControlzExLicense"
+                    Style="{StaticResource HyperlinkButton}"
+                    Focusable="False"
+                    VerticalAlignment="Center" >
+                <TextBlock>
+                    <Hyperlink Focusable="False">
+                        License
+                    </Hyperlink>
+                </TextBlock>
+            </Button>
+
+            <TextBlock Grid.Row="5" Grid.Column="1"
+                       Text="youtube-dl"
+                       VerticalAlignment="Center" />
+            <Button Grid.Row="5" Grid.Column="3"
+                    Name="ShowYoutubeDlLicense"
+                    Style="{StaticResource HyperlinkButton}"
+                    Focusable="False"
+                    VerticalAlignment="Center">
+                <TextBlock>
+                    <Hyperlink Focusable="False">
+                        License
+                    </Hyperlink>
+                </TextBlock>
+            </Button>
+
+        </Grid>
+
+
+
+        <Grid Grid.Row="8" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0"
+                    x:Name="Ok"
+                    Content="OK"
+                    Width="85" Height="37"
+                    Margin="5" />
+        </Grid>
+
+    </Grid>
+
+</Controls:MetroWindow>
