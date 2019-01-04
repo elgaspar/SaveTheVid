@@ -19,9 +19,9 @@ It allows you to download video/audio from [supported sites](https://rg3.github.
 
 
 ### Downloads
-[Windows Installer](https://github.com/elgaspar/SaveTheVid/releases/download/1.0.0/SaveTheVid-v1.0.0-setup.zip)
+[Windows Installer](https://github.com/elgaspar/SaveTheVid/releases/download/1.0.1/SaveTheVid-v1.0.1-setup.exe)
 
-[Windows Portable](https://github.com/elgaspar/SaveTheVid/releases/download/1.0.0/SaveTheVid-v1.0.0-portable.zip)
+[Windows Portable](https://github.com/elgaspar/SaveTheVid/releases/download/1.0.1/SaveTheVid-v1.0.1-portable.zip)
 
 
 ### Installation
