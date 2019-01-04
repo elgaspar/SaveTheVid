@@ -72,7 +72,7 @@
 
 
         <TextBlock Grid.Row="1"
-                   Text="Copyright © 2018 Elias Gasparis"
+                   Text="Copyright © 2018-2019 Elias Gasparis"
                    FontSize="16"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"

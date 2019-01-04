@@ -6,7 +6,7 @@ namespace SaveTheVid.ViewModels
 {
     class MainViewModel : PropertyChangedBase
     {
-        private const string VersionNo = "1.0.0";
+        private const string VersionNo = "1.0.1";
 
         public DownloadQueueViewModel DownloadQueueVM { get; }
         public JobViewModel JobVM { get; }
